@@ -24,4 +24,17 @@ body {
   min-width: 900px;
   height: 95%;
   background: #fff;
+  display: flex;
+}
+
+.sidebar {
+  background: #000;
+  height: 100%;
+  width: 400px;
+}
+
+.content {
+  background: purple;
+  height: 100%;
+  width: calc(100% - 400px);
 }
