@@ -31,7 +31,7 @@
       <section class="left sidebar">
         <header class="header-sidebar">
           <div class="user-me">
-            <img src="./img/avatar_io.jpg" alt="avatar1" class="avatar" />
+            <img src="./img/avatar_io.jpg" alt="avatar-io" class="avatar" />
             <span class="text-user-me fs-14">Nome utente</span>
           </div>
           <ul class="header-icons">
@@ -74,13 +74,13 @@
         <!-- Section Chat -->
         <section class="chat-users">
           <ul class="chat-list">
-            <li class="single-chat">
+            <li class="single-chat" v-for="contact in contacts">
               <img
-                src="./img/avatar_1.jpg"
-                alt="avatar1"
+                :src="`img/avatar${contact.avatar}.jpg`"
+                :alt="contact.name"
                 class="single-chat-avatar"
               />
-              <span class="name-chat">Michele</span>
+              <span class="name-chat">{{contact.name}}</span>
             </li>
           </ul>
         </section>
@@ -121,7 +121,7 @@
               </div>
             </div>
             <div class="message receveid">
-              <div class="text-message fs-14">Messaggio inviato</div>
+              <div class="text-message fs-14">Messaggio ricevuto</div>
               <div class="message-info color-grey">
                 <span class="messagge-date">10/01/2021</span>
                 <span class="messagge-hour">15:50:00</span>
