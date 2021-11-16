@@ -131,6 +131,27 @@ body {
   color: #8e8e8e;
 }
 
+.sidebar .chat-users .chat-list {
+  list-style: none;
+}
+
+.sidebar .chat-users .chat-list .single-chat {
+  border-bottom: 0.3px solid #c4c2c2;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+
+.sidebar .chat-users .chat-list .single-chat:last-child {
+  border-bottom: none;
+}
+
+.sidebar .chat-users .chat-list .single-chat .single-chat-avatar {
+  width: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
 /* Section Main Content */
 .content {
   background: purple;
