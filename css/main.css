@@ -30,6 +30,18 @@ body {
 
 /* Utilities */
 
+.mx-6 {
+  margin: 0 6px;
+}
+
+.mr-12 {
+  margin-right: 12px;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
 /* Section sidebar */
 .sidebar {
   background: pink;
@@ -61,13 +73,31 @@ body {
   display: flex;
 }
 
-.header-sidebar .header-icons li {
-  margin: 0 6px;
-}
-
 .header-sidebar .user-me .text-user-me {
   text-transform: capitalize;
-  font-size: 14px;
+}
+
+.sidebar .sidebar-notifications {
+  background: #a2dffe;
+  display: flex;
+  padding: 13px 18px;
+  align-items: center;
+}
+
+.sidebar-notifications .notification-icon .icon {
+  color: #a2dffe;
+  background: #fff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+}
+
+.sidebar-notifications .notification-text .notification-text-link a {
+  font-size: 12px;
+  color: #898f92;
 }
 
 /* Section Main Content */
