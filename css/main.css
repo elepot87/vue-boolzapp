@@ -54,6 +54,10 @@ body {
   font-size: 12px;
 }
 
+.fs-10 {
+  font-size: 10px;
+}
+
 .color-grey {
   color: #898f92;
 }
@@ -179,7 +183,6 @@ body {
 
 /* Section Main Content */
 .content {
-  background: purple;
   height: 100%;
   width: calc(100% - 450px);
 }
@@ -213,8 +216,46 @@ body {
 
 .right .expanded-chat {
   flex-grow: 1;
+  background-image: url(../img/mine.jpg);
+  background-repeat: repeat;
 }
 
+.right .expanded-chat .container-chat {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 500px;
+  margin: 40px auto;
+}
+
+.right .expanded-chat .container-chat .message.sent,
+.right .expanded-chat .container-chat .message.receveid {
+  width: 30%;
+  border-radius: 8px;
+  height: 50px;
+}
+
+.right .expanded-chat .container-chat .message.sent {
+  background: #ddfabf;
+  align-self: flex-end;
+}
+
+.right .expanded-chat .container-chat .message.receveid {
+  background: #ffffff;
+  align-self: flex-start;
+}
+
+.right .expanded-chat .container-chat .text-message {
+  padding: 15px 0 0 15px;
+}
+
+.right .expanded-chat .container-chat .message-info {
+  text-align: right;
+  padding: 2px 5px 5px 0;
+  font-size: 10px;
+}
+
+/* Footer */
 .footer {
   background-color: #ededed;
   display: flex;
