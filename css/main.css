@@ -38,12 +38,24 @@ body {
   margin-right: 12px;
 }
 
+.mt-5 {
+  margin-top: 5px;
+}
+
 .p-0 {
   padding: 0;
 }
 
 .fs-14 {
   font-size: 14px;
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+.color-grey {
+  color: #898f92;
 }
 
 /* Section sidebar */
@@ -185,4 +197,9 @@ body {
 
 .header-content .header-icons {
   margin-right: 10px;
+}
+
+.header-content .user-chat .text-user-chat {
+  display: flex;
+  flex-direction: column;
 }
