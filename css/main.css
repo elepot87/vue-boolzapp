@@ -203,3 +203,54 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+/* Expanded Chat Content */
+
+.right {
+  display: flex;
+  flex-direction: column;
+}
+
+.right .expanded-chat {
+  flex-grow: 1;
+}
+
+.footer {
+  background-color: #ededed;
+  display: flex;
+  padding: 10px 0;
+  align-items: center;
+  color: #777e82;
+}
+
+.footer .footer-center {
+  width: 86%;
+}
+
+.footer .footer-left,
+.footer .footer-right {
+  width: 7%;
+  text-align: center;
+}
+
+.footer .footer-left .icon,
+.footer .footer-right .icon {
+  font-size: 18px;
+}
+
+.footer .footer-center input {
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-radius: 3px;
+  padding: 15px;
+  font-size: 10px;
+  color: #c4c2c2;
+  outline: none;
+}
+
+.footer .footer-center input:hover,
+.footer .footer-center input:focus {
+  border-color: #8e8e8e;
+  color: #8e8e8e;
+}
