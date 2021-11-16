@@ -1,3 +1,4 @@
+/* General */
 * {
   margin: 0;
   padding: 0;
@@ -27,12 +28,49 @@ body {
   display: flex;
 }
 
+/* Utilities */
+
+/* Section sidebar */
 .sidebar {
-  background: #000;
+  background: pink;
   height: 100%;
   width: 400px;
 }
 
+.header-sidebar {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 10px;
+  align-items: center;
+  background: #ededed;
+}
+
+.header-sidebar .user-me {
+  display: flex;
+  align-items: center;
+}
+
+.header-sidebar .user-me .avatar {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.header-sidebar .header-icons {
+  color: #bababa;
+  list-style: none;
+  display: flex;
+}
+
+.header-sidebar .header-icons li {
+  margin: 0 6px;
+}
+
+.header-sidebar .user-me .text-user-me {
+  text-transform: capitalize;
+  font-size: 14px;
+}
+
+/* Section Main Content */
 .content {
   background: purple;
   height: 100%;
