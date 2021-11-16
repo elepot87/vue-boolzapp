@@ -46,7 +46,7 @@ body {
 .sidebar {
   background: pink;
   height: 100%;
-  width: 400px;
+  width: 450px;
 }
 
 .header-sidebar {
@@ -100,9 +100,40 @@ body {
   color: #898f92;
 }
 
+.sidebar .search {
+  background: #fafafa;
+  display: flex;
+  padding: 8px 10px;
+}
+
+.sidebar .search .search-icon {
+  width: 15%;
+  background: #fff;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: #bababa;
+  border: 0.3px solid #eeebeb;
+}
+
+.sidebar .search #search {
+  width: 85%;
+  border: 0.3px solid #eeebeb;
+  padding: 0 10px;
+  font-size: 10px;
+  color: #c4c2c2;
+  outline: none;
+}
+
+.sidebar .search #search:hover,
+.sidebar .search #search:focus {
+  border-color: #8e8e8e;
+  color: #8e8e8e;
+}
+
 /* Section Main Content */
 .content {
   background: purple;
   height: 100%;
-  width: calc(100% - 400px);
+  width: calc(100% - 450px);
 }
