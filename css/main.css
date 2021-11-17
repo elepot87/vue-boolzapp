@@ -236,11 +236,16 @@ body {
   margin: 40px auto;
 }
 
+.right .expanded-chat .container-chat .messages {
+  display: flex;
+  flex-direction: column;
+}
+
 .right .expanded-chat .container-chat .message.sent,
 .right .expanded-chat .container-chat .message.receveid {
   width: 30%;
   border-radius: 8px;
-  height: 50px;
+  /* height: 50px; */
 }
 
 .right .expanded-chat .container-chat .message.sent {

@@ -125,20 +125,20 @@
         <main class="expanded-chat">
           <div class="container-chat">
             <div
-              class="message sent"
-              v-for="message in contacts[currentContact].messages"
-              v-if="message.status === 'sent'"
-            >
-              <div class="text-message fs-14">{{message.text}}</div>
-              <div class="message-info color-grey">{{message.date}}</div>
-            </div>
-            <div
-              class="message receveid"
-              v-if="message.status === 'received'"
+              class="messages"
               v-for="message in contacts[currentContact].messages"
             >
-              <div class="text-message fs-14">{{message.text}}</div>
-              <div class="message-info color-grey">{{message.date}}</div>
+              <div class="message sent" v-if="message.status === 'sent'">
+                <div class="text-message fs-14">{{message.text}}</div>
+                <div class="message-info color-grey">{{message.date}}</div>
+              </div>
+              <div
+                class="message receveid"
+                v-if="message.status === 'received'"
+              >
+                <div class="text-message fs-14">{{message.text}}</div>
+                <div class="message-info color-grey">{{message.date}}</div>
+              </div>
             </div>
           </div>
         </main>
