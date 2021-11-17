@@ -159,6 +159,9 @@ body {
 }
 
 /* Sidebar chat */
+.sidebar .chat-users {
+  overflow-y: auto;
+}
 
 .sidebar .chat-users .chat-list {
   list-style: none;
@@ -169,6 +172,10 @@ body {
   display: flex;
   align-items: center;
   padding: 15px;
+}
+
+.sidebar .chat-users .chat-list .single-chat:hover {
+  background-color: #e7e8e9;
 }
 
 .sidebar .chat-users .chat-list .single-chat:last-child {
@@ -218,6 +225,7 @@ body {
   flex-grow: 1;
   background-image: url(../img/mine.jpg);
   background-repeat: repeat;
+  overflow-y: auto;
 }
 
 .right .expanded-chat .container-chat {
@@ -246,12 +254,12 @@ body {
 }
 
 .right .expanded-chat .container-chat .text-message {
-  padding: 15px 0 0 15px;
+  padding: 10px 0 0 15px;
 }
 
 .right .expanded-chat .container-chat .message-info {
   text-align: right;
-  padding: 2px 5px 5px 0;
+  padding: 6px 5px 5px 0;
   font-size: 10px;
 }
 
