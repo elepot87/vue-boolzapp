@@ -94,11 +94,14 @@ const app = new Vue({
       this.currentContact = index;
     },
     sendMessage() {
-      this.contacts[this.currentContact].messages.push({
+      if(this.newMessageText.length > 0) {
+        this.contacts[this.currentContact].messages.push({
         date: "ora",
         text: this.newMessageText,
         status: "sent",
-      });
+      },);
+      this.newMessageText='';
+      }
     },
   },
 });
