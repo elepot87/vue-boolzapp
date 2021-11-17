@@ -96,7 +96,7 @@ const app = new Vue({
     sendMessage() {
       if(this.newMessageText.length > 0) {
         this.contacts[this.currentContact].messages.push({
-        date: "ora",
+        date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
         text: this.newMessageText,
         status: "sent",
       },);
@@ -107,7 +107,7 @@ const app = new Vue({
     autoAnswer(){
       setTimeout(()=> {
         this.contacts[this.currentContact].messages.push({
-          date: "ora",
+          date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
           text: 'aiuto',
           status: "received",
         },);
