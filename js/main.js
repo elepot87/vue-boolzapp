@@ -101,7 +101,17 @@ const app = new Vue({
         status: "sent",
       },);
       this.newMessageText='';
+      this.autoAnswer();
       }
+    },
+    autoAnswer(){
+      setTimeout(()=> {
+        this.contacts[this.currentContact].messages.push({
+          date: "ora",
+          text: 'aiuto',
+          status: "received",
+        },);
+      }, 1000);
     },
   },
 });
