@@ -79,7 +79,6 @@
               :class="{active: index === currentContact}"
               v-for="(contact, index) in contacts"
               @click="activateChat(index)"
-              @click="setIndexMessage(index)"
             >
               <img
                 :src="`img/avatar${contact.avatar}.jpg`"
@@ -124,26 +123,22 @@
         </header>
         <!-- Main content with expand chat -->
         <main class="expanded-chat">
-          <div
-            class="container-chat" 
-          >
-            <div class="message sent">
-              <div class="text-message fs-14"         
-              >
-              Messaggio inviato
+          <div class="container-chat">
+            <div
+              class="message sent"
+              v-for="message in contacts[currentContact].messages"
+              v-if="message.status === 'sent'"
+            >
+              <div class="text-message fs-14">{{message.text}}</div>
+              <div class="message-info color-grey">{{message.date}}</div>
             </div>
-            <div class="message-info color-grey">
-              <span class="messagge-date">10/01/2021</span>
-              <span class="messagge-hour">15:50:00</span>
-            </div>
-          </div>
-          <div class="message receveid">
-            <div 
-            class="text-message fs-14"
-            > Messaggio ricevuto</div>
-            <div class="message-info color-grey">
-              <span class="messagge-date">10/01/2021</span>
-              <span class="messagge-hour">15:50:00</span>
+            <div
+              class="message receveid"
+              v-if="message.status === 'received'"
+              v-for="message in contacts[currentContact].messages"
+            >
+              <div class="text-message fs-14">{{message.text}}</div>
+              <div class="message-info color-grey">{{message.date}}</div>
             </div>
           </div>
         </main>
