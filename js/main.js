@@ -87,6 +87,7 @@ const app = new Vue({
       },
     ],
     currentContact: 0, //index contatto
+    currentMessage: 0,
   },
   methods: {
     activateChat(index) {

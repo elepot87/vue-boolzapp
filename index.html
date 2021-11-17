@@ -74,11 +74,12 @@
         <!-- Section Chat -->
         <section class="chat-users">
           <ul class="chat-list">
-            <li 
-            class="single-chat" 
-            :class="{active: index === currentContact}"
-            v-for="(contact, index) in contacts"
-            @click="activateChat(index)"
+            <li
+              class="single-chat"
+              :class="{active: index === currentContact}"
+              v-for="(contact, index) in contacts"
+              @click="activateChat(index)"
+              @click="setIndexMessage(index)"
             >
               <img
                 :src="`img/avatar${contact.avatar}.jpg`"
@@ -95,9 +96,15 @@
         <!-- Header right -->
         <header class="header-content">
           <div class="user-chat">
-            <img :src="`img/avatar${contacts[currentContact].avatar}.jpg`" alt="avatar1" class="avatar" />
+            <img
+              :src="`img/avatar${contacts[currentContact].avatar}.jpg`"
+              alt="avatar1"
+              class="avatar"
+            />
             <div class="text-user-chat">
-              <span class="chat-name fs-14">{{contacts[currentContact].name}}</span>
+              <span class="chat-name fs-14"
+                >{{contacts[currentContact].name}}</span
+              >
               <span class="last-access fs-12 mt-5 color-grey"
                 >Ultimo accesso oggi alle 10.35</span
               >
@@ -117,20 +124,26 @@
         </header>
         <!-- Main content with expand chat -->
         <main class="expanded-chat">
-          <div class="container-chat"
+          <div
+            class="container-chat" 
           >
             <div class="message sent">
-              <div class="text-message fs-14">Messaggio inviato</div>
-              <div class="message-info color-grey">
-                <span class="messagge-date">10/01/2021</span>
-                <span class="messagge-hour">15:50:00</span>
-              </div>
+              <div class="text-message fs-14"         
+              >
+              Messaggio inviato
             </div>
-            <div class="message receveid">
-              <div class="text-message fs-14">Messaggio ricevuto</div>
-              <div class="message-info color-grey">
-                <span class="messagge-date">10/01/2021</span>
-                <span class="messagge-hour">15:50:00</span>
+            <div class="message-info color-grey">
+              <span class="messagge-date">10/01/2021</span>
+              <span class="messagge-hour">15:50:00</span>
+            </div>
+          </div>
+          <div class="message receveid">
+            <div 
+            class="text-message fs-14"
+            > Messaggio ricevuto</div>
+            <div class="message-info color-grey">
+              <span class="messagge-date">10/01/2021</span>
+              <span class="messagge-hour">15:50:00</span>
             </div>
           </div>
         </main>
