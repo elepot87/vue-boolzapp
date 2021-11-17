@@ -140,7 +140,12 @@
             <i class="far fa-smile icon"></i>
           </div>
           <div class="footer-center">
-            <input type="text" placeholder="Scrivi un messaggio" />
+            <input
+              type="text"
+              placeholder="Scrivi un messaggio"
+              v-model="newMessageText"
+              @keyup.enter="sendMessage"
+            />
           </div>
           <div class="footer-right">
             <i class="fas fa-microphone icon"></i>

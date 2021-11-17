@@ -87,10 +87,18 @@ const app = new Vue({
       },
     ],
     currentContact: 0, //index contatto
+    newMessageText: "",
   },
   methods: {
     activateChat(index) {
       this.currentContact = index;
+    },
+    sendMessage() {
+      this.contacts[this.currentContact].messages.push({
+        date: "ora",
+        text: this.newMessageText,
+        status: "sent",
+      });
     },
   },
 });
