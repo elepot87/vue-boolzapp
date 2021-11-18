@@ -99,13 +99,13 @@
         <header class="header-content">
           <div class="user-chat">
             <img
-              :src="`img/avatar${contacts[currentContact].avatar}.jpg`"
-              :alt="`img/avatar${contacts[currentContact].name}.jpg`"
+              :src="`img/avatar${filteredContacts[currentContact].avatar}.jpg`"
+              :alt="`img/avatar${filteredContacts[currentContact].name}.jpg`"
               class="avatar"
             />
             <div class="text-user-chat">
               <span class="chat-name fs-14"
-                >{{contacts[currentContact].name}}</span
+                >{{filteredContacts[currentContact].name}}</span
               >
               <span class="last-access fs-12 mt-5 color-grey"
                 >Ultimo accesso oggi alle 10.35</span
@@ -129,14 +129,14 @@
           <div class="container-chat">
             <div
               class="message"
-              :class="contacts[currentContact].messages[index].status"
-              v-for="(message,index) in contacts[currentContact].messages"
+              :class="filteredContacts[currentContact].messages[index].status"
+              v-for="(message,index) in filteredContacts[currentContact].messages"
               @click="setIndexMessage(index)"
               @mouseleave="removeIndexMessage()"
             >
             <i class="fas fa-chevron-down icon"></i>
-              <div class="text-message fs-14">{{contacts[currentContact].messages[index].text}}</div>
-              <div class="message-info color-grey">{{contacts[currentContact].messages[index].date}}</div>
+              <div class="text-message fs-14">{{filteredContacts[currentContact].messages[index].text}}</div>
+              <div class="message-info color-grey">{{filteredContacts[currentContact].messages[index].date}}</div>
               <ul 
               class="dropdown"
               :class="(index === currentMessage ? 'dropdown-visible' : null)"

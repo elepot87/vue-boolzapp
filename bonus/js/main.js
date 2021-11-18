@@ -128,7 +128,7 @@ const app = new Vue({
     // funzione per cancellare il messaggio selezionato 
     deleteMessagge(){
       console.log('click delete');
-      this.contacts[this.currentContact].messages.splice(this.currentMessage, 1);
+      this.filteredContacts[this.currentContact].messages.splice(this.currentMessage, 1);
     }
   },
   computed: {
