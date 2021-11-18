@@ -273,35 +273,6 @@ body {
   font-size: 10px;
 }
 
-/* .right .dropdown {
-  list-style: none;
-  background-color: #fff;
-  width: 15%;
-  font-size: 14px;
-  color: #8e8e8e;
-  padding: 0 10px;
-  position: absolute;
-  left: 150px;
-  bottom: 33px;
-  display: none;
-}
-
-.dropdown-visible {
-  display: block;
-}
-
-.right .dropdown li {
-  margin-top: 10px;
-}
-
-.right .dropdown li:last-child {
-  margin-bottom: 15px;
-}
-
-.right .dropdown li:first-child {
-  margin-top: 15px;
-} */
-
 /* Footer */
 .footer {
   background-color: #ededed;

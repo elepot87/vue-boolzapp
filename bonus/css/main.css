@@ -253,7 +253,7 @@ body {
 }
 
 .right .message .icon {
-  position: relative;
+  position: absolute;
   left: 100%;
   transform: translate(-20px);
   top: 10%;
