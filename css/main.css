@@ -273,7 +273,7 @@ body {
   font-size: 10px;
 }
 
-.right .dropdown {
+/* .right .dropdown {
   list-style: none;
   background-color: #fff;
   width: 15%;
@@ -300,7 +300,7 @@ body {
 
 .right .dropdown li:first-child {
   margin-top: 15px;
-}
+} */
 
 /* Footer */
 .footer {
