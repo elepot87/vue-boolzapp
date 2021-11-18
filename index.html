@@ -99,13 +99,13 @@
         <header class="header-content">
           <div class="user-chat">
             <img
-              :src="`img/avatar${contacts[currentContact].avatar}.jpg`"
-              :alt="`img/avatar${contacts[currentContact].name}.jpg`"
+              :src="`img/avatar${filteredContacts[currentContact].avatar}.jpg`"
+              :alt="`img/avatar${filteredContacts[currentContact].name}.jpg`"
               class="avatar"
             />
             <div class="text-user-chat">
               <span class="chat-name fs-14"
-                >{{contacts[currentContact].name}}</span
+                >{{filteredContacts[currentContact].name}}</span
               >
               <span class="last-access fs-12 mt-5 color-grey"
                 >Ultimo accesso oggi alle 10.35</span
@@ -130,7 +130,7 @@
             <div
               class="message"
               :class="message.status"
-              v-for="message in contacts[currentContact].messages"
+              v-for="message in filteredContacts[currentContact].messages"
             >
               <div class="text-message fs-14">{{message.text}}</div>
               <div class="message-info color-grey">{{message.date}}</div>
