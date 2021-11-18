@@ -178,6 +178,10 @@ body {
   background-color: #e7e8e9;
 }
 
+.active {
+  background-color: #e7e8e9;
+}
+
 .sidebar .chat-users .chat-list .single-chat:last-child {
   border-bottom: none;
 }
