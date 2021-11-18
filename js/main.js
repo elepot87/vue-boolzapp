@@ -119,7 +119,7 @@ const app = new Vue({
   computed: {
     filteredContacts() {
       return this.contacts.filter((contact) => {
-        return contact.name.toLocaleLowerCase().match(this.search.toLowerCase());
+        return contact.name.toLowerCase().match(this.search.toLowerCase());
       });
     },
   },
