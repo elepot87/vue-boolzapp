@@ -356,3 +356,14 @@ body {
   border-color: #8e8e8e;
   color: #8e8e8e;
 }
+
+/**************************** 
+MEDIA QUERY
+****************************/
+
+@media screen and (max-width: 1600px) {
+  .right .dropdown {
+  width: 70%;
+  left: 30%;
+}
+}
