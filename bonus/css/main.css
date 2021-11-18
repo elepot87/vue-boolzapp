@@ -248,9 +248,21 @@ body {
 .right .message {
   width: 30%;
   border-radius: 8px;
-  /* height: 50px; */
   margin-top: 10px;
   position: relative;
+}
+
+.right .message .icon {
+  position: relative;
+  left: 100%;
+  transform: translate(-20px);
+  top: 10%;
+  color: #acacac;
+  display: none;
+}
+
+.right .message:hover .icon {
+  display: block;
 }
 
 .right .message.sent {
@@ -273,6 +285,7 @@ body {
   font-size: 10px;
 }
 
+
 .right .dropdown {
   list-style: none;
   background-color: #fff;
@@ -281,7 +294,7 @@ body {
   color: #8e8e8e;
   padding: 0 10px;
   position: absolute;
-  left: 158px;
+  left: 157px;
   top: 25px;
   display: none;
   z-index: 2;

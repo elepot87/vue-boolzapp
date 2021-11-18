@@ -132,8 +132,9 @@
               :class="contacts[currentContact].messages[index].status"
               v-for="(message,index) in contacts[currentContact].messages"
               @click="setIndexMessage(index)"
-               @mouseleave="removeIndexMessage()"
+              @mouseleave="removeIndexMessage()"
             >
+            <i class="fas fa-chevron-down icon"></i>
               <div class="text-message fs-14">{{contacts[currentContact].messages[index].text}}</div>
               <div class="message-info color-grey">{{contacts[currentContact].messages[index].date}}</div>
               <ul 
