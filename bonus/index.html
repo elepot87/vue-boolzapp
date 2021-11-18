@@ -129,20 +129,22 @@
           <div class="container-chat">
             <div
               class="message"
-              :class="message.status"
-              v-for="message in contacts[currentContact].messages"
+              :class="contacts[currentContact].messages[index].status"
+              v-for="(message,index) in contacts[currentContact].messages"
+              @mouseover="setIndexMessage(index)"
+               @mouseleave="removeIndexMessage()"
             >
-              <div class="text-message fs-14">{{message.text}}</div>
-              <div class="message-info color-grey">{{message.date}}</div>
+              <div class="text-message fs-14">{{contacts[currentContact].messages[index].text}}</div>
+              <div class="message-info color-grey">{{contacts[currentContact].messages[index].date}}</div>
+              <ul 
+              class="dropdown"
+              :class="(index === currentMessage ? 'dropdown-visible' : null)"
+              >
+                <li>Message info</li>
+                <li>Delete message</li>
+              </ul>
             </div>
-            <ul 
-            class="dropdown"
-            >
-              <li>Message info</li>
-              <li>Delete message</li>
-            </ul>
           </div>
-        </main>
         <!-- Footer -->
         <footer class="footer">
           <div class="footer-left">

@@ -87,6 +87,7 @@ const app = new Vue({
       },
     ],
     currentContact: 0, //index contatto
+    currentMessage: null, //index messaggio
     newMessageText: "",
     search: "",
   },
@@ -114,6 +115,15 @@ const app = new Vue({
           status: "received",
         },);
       }, 1000);
+    },
+    // funzione per impostare l'index del messaggio al mouseenter
+    setIndexMessage(index) {
+      this.currentMessage = index;
+    },
+    // funzione per rimuovere l'index del messaggio al mouseleave
+    removeIndexMessage() {
+      this.currentMessage = null;
+      return this.currentMessage;
     },
   },
   computed: {

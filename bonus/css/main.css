@@ -276,17 +276,18 @@ body {
 .right .dropdown {
   list-style: none;
   background-color: #fff;
-  width: 15%;
+  width: 50%;
   font-size: 14px;
   color: #8e8e8e;
   padding: 0 10px;
   position: absolute;
-  left: 150px;
-  bottom: 33px;
+  left: 158px;
+  top: 25px;
   display: none;
+  z-index: 2;
 }
 
-.dropdown-visible {
+.right .dropdown-visible {
   display: block;
 }
 
