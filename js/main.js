@@ -88,6 +88,8 @@ const app = new Vue({
     ],
     currentContact: 0, //index contatto
     newMessageText: "",
+    search: "",
+    filterActive: false,
   },
   methods: {
     activateChat(index) {
@@ -112,6 +114,13 @@ const app = new Vue({
           status: "received",
         },);
       }, 1000);
+    },
+  },
+  computed: {
+    filteredContacts() {
+      return this.contacts.filter((contact) => {
+        return contact.name.toLocaleLowerCase().match(this.search.toLowerCase());
+      });
     },
   },
 });

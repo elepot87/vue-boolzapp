@@ -69,15 +69,18 @@
             type="text"
             placeholder="Cerca o inizia una nuova chat"
             id="search"
+            v-model="search"
           />
         </section>
         <!-- Section Chat -->
         <section class="chat-users">
-          <ul class="chat-list">
+          <ul 
+          class="chat-list"
+          >
             <li
               class="single-chat"
               :class="{active: index === currentContact}"
-              v-for="(contact, index) in contacts"
+              v-for="(contact, index) in filteredContacts"
               @click="activateChat(index)"
             >
               <img
