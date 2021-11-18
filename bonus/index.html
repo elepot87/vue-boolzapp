@@ -141,7 +141,7 @@
               :class="(index === currentMessage ? 'dropdown-visible' : null)"
               >
                 <li>Message info</li>
-                <li>Delete message</li>
+                <li @click="deleteMessagge()">Delete message</li>
               </ul>
             </div>
           </div>

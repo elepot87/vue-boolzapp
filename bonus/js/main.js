@@ -116,7 +116,7 @@ const app = new Vue({
         },);
       }, 1000);
     },
-    // funzione per impostare l'index del messaggio al mouseenter
+    // funzione per impostare l'index del messaggio al click
     setIndexMessage(index) {
       this.currentMessage = index;
     },
@@ -125,6 +125,11 @@ const app = new Vue({
       this.currentMessage = null;
       return this.currentMessage;
     },
+    // funzione per cancellare il messaggio selezionato 
+    deleteMessagge(){
+      console.log('click delete');
+      this.contacts[this.currentContact].messages.splice(this.currentMessage, 1);
+    }
   },
   computed: {
     filteredContacts() {
