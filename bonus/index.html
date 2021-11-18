@@ -131,7 +131,7 @@
               class="message"
               :class="contacts[currentContact].messages[index].status"
               v-for="(message,index) in contacts[currentContact].messages"
-              @mouseover="setIndexMessage(index)"
+              @click="setIndexMessage(index)"
                @mouseleave="removeIndexMessage()"
             >
               <div class="text-message fs-14">{{contacts[currentContact].messages[index].text}}</div>
